@@ -60,4 +60,9 @@ public class GlobalException {
         return  ResponseEntity.badRequest().body(map);
     }
 
+    @ExceptionHandler(UserException.class)
+    public UserExceptionDto notAge(UserException ex){
+        return new UserExceptionDto(HttpStatus.BAD_REQUEST,ex.getMessage());
+    }
+
 }

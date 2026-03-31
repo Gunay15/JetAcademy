@@ -1,3 +1,4 @@
+/*
 package com.student.controller;
 
 import com.student.dao.entity.StudentEntity;
@@ -91,3 +92,4 @@ public class AllController {
         return personnService.c();
     }
 }
+*/

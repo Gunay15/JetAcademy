@@ -1,31 +1,29 @@
 package com.student.dao.entity;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Entity
-@Table(name = "studentt")
+@Table(name = "customer")
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Setter
+@Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class StudentEntity {
+public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
     String surname;
     Integer age;
-    Integer teacherId;
+    Double balance;
+    String cardNumber;
 
-    public StudentEntity(String name, String surname, Integer age,Integer teacherId) {
+    public CustomerEntity(String name, String surname, Double balance) {
         this.name = name;
         this.surname = surname;
-        this.age = age;
-        this.teacherId=teacherId;
+        this.balance = balance;
     }
 }
